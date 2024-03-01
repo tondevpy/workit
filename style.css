@@ -1,0 +1,307 @@
+@import "reset.css";
+@import "utilities.css";
+
+.header-bg {
+  background: var(--p1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 56px;
+}
+
+@media(max-width: 1300px) {
+  header {
+    padding: 40px;
+  }
+}
+
+@media(max-width: 600px) {
+  header {
+    padding: 36px 16px;
+  }
+}
+
+.main-bg {
+  position: relative;
+  background: var(--p1);
+  /* border-bottom-left-radius: 600px 50px;
+  border-bottom-right-radius: 600px 50px; */
+  box-shadow: inset 0em -10em var(--p4);
+  overflow: hidden;
+}
+
+.main-bg::before{
+  position: absolute;
+  left: -100px;
+  content: url("assets/images/bg-pattern-1.svg");
+}
+
+.main-bg::after{
+  position: absolute;
+  right: -50px;
+  top: 200px;
+  content: url("assets/images/bg-pattern-2.svg");
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-pos {
+  max-width: 640px;
+  display: grid;
+  gap: 40px;
+}
+
+.center-pos h1 {
+  text-align: center;
+  color: var(--p0);
+}
+
+.center-pos a{
+  place-self: center;
+}
+
+u {
+  text-decoration: var(--p2) underline;
+}
+
+article {
+  padding: 100px;
+}
+
+@media(max-width: 1300px) {
+  .main-bg::before{
+    left: -210px;
+  }
+
+  .main-bg::after{
+    right: -80px;
+  }
+
+  .center-pos {
+    max-width: 560px;
+  }
+
+  .center-pos h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  article {
+    padding: 40px;
+  }
+}
+
+@media(max-width: 600px) {
+  .main-bg::before{
+    display: none;
+  }
+
+  .main-bg::after{
+    display: none;
+  }
+
+  .center-pos img {
+    max-width: 320px;
+    place-self: center;
+  }
+
+  .center-pos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .center-pos a {
+    margin-bottom: 50px;
+  }
+
+  .main-bg {
+    box-shadow: inset 0em -10em var(--p4);
+  }
+}
+
+article > ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+article > ul > li {
+  max-width: 350px;
+  display: grid;
+  gap: 28px;
+  text-align: center;
+}
+
+.circle {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  width: 56px;
+  height: 56px;
+  place-self: center;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 1300px) {
+  article > ul {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  article > ul > li {
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 32px;
+    text-align: left;
+  }
+
+  article > ul > li > p {
+    grid-column: 2;
+  }
+
+  .circle {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+}
+
+@media(max-width: 600px) {
+  article > ul > li {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.article-bg {
+  padding-top: 150px;
+  background: var(--p0);
+}
+
+.article-test { 
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.founder-img {
+  max-width: 400px;
+  position: relative;
+  left: 90px;
+  top: -150px;
+  place-self: flex-start;
+}
+
+.article-test-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 30px;
+  max-width: 600px;
+  background: var(--p1);
+  color: var(--p0);
+  padding: 60px;
+}
+
+.article-test-content::after {
+  position: absolute;
+  content: url("assets/images/bg-pattern-3.svg");
+  bottom: -70px;
+  right: 50px;
+}
+
+@media(max-width: 1300px) {
+  .article-test-content{
+    max-width: 600px;
+    padding: 48px;
+  }
+
+  .article-test-content h2 {
+    font-size: 3rem;
+  }
+
+  .article-test-content p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .founder-img {
+    max-width: 280px;
+    right: 40px;
+    top: -120px;
+  }
+}
+
+@media(max-width: 600px) {
+  .article-bg {
+    padding-top: 50px;
+  }
+
+  .article-test {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .founder-img {
+    max-width: 100%;
+    left: 0px;
+    top: 80px;
+  }
+
+  .article-test {
+    padding: 16px;
+  }
+
+  .article-test-content {
+    place-self: flex-start;
+    padding: 30px;
+  }
+
+  .article-test-content::after {
+    display: none;
+  }
+
+  .article-test-content h2 {
+    text-align: center;
+  }
+
+  .article-test-content p {
+    text-align: center;
+  }
+
+  .article-test-content a {
+    justify-self: center;
+  }
+}
+
+.footer-bg {
+  background: var(--p0);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 60px;
+  place-items: center;
+}
+
+footer > div {
+  display: flex;
+  gap: 28px;
+}

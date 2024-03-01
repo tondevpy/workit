@@ -1,0 +1,84 @@
+:root {
+  --p0: #ffffff;
+  --p1: #24053e;
+  --p2: #44ffa1;
+  --p3: #584d62;
+  --p4: #fcf8ff;
+}
+
+body {
+  font-family: "Manrope";
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading-l {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.heading-m {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.heading-s {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.body-font {
+  font-family: "Manrope", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.btn-primary {
+  background: var(--p2);
+  color: var(--p1);
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  padding: 14px 24px;
+  display: inline-block;
+  border: 2px solid var(--p2);
+  max-width: fit-content;
+}
+
+.btn-primary:hover {
+  background: var(--p1);
+  color: var(--p2);
+  border: 2px solid var(--p2);
+  transition: .3s;
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-block;
+  color: var(--p0);
+  max-width: fit-content;
+}
+
+.btn-secondary::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--p2);
+  margin-top: 4px;
+}
+
+.btn-secondary:hover {
+  color: var(--p2);
+  transition: .3s;
+}
